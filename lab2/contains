@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Check if the "*" symbol is present
+if [[ ! "$1" =~ "*" ]]; then
+  # If not, add the symbol and print a message
+  echo "\"*\" is required"
+  argument="$1/*"
+else
+  # If it is present, print a different message
+  echo "Symbol is not required"
+  argument="$1"
+fi
